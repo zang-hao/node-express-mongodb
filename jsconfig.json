@@ -4,7 +4,7 @@
       "module": "commonjs",
       "allowSyntheticDefaultImports": true
     },
-    "exclude": [
+    "include": [
       "node_modules"
     ]
   }
