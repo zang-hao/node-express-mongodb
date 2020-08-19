@@ -1,4 +1,8 @@
 {
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/repository.git"
+  },
   "name": "node-express-mongodb",
   "version": "1.0.0",
   "description": "Node.js Restful CRUD API with Node.js, Express and MongoDB",
