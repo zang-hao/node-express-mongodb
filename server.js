@@ -4,9 +4,12 @@ const cors = require("cors");
 
 const app = express();
 
+//loading static file
+const path = __dirname + '/app/views'
+app.use(express.static(path))
 
 var corsOptions = {
-  origin: ["http://127.0.0.1:8081","http://192.168.2.102:8081"]
+  origin: ["http://127.0.0.1:8081", "http://192.168.2.102:8081","http://localhost:8081","http://localhost:8080"]
 };
 
 app.use(cors(corsOptions));
@@ -56,9 +59,13 @@ db.mongoose
   });
 
 // simple route
+//get static file
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.sendFile(path+"index.html");
 });
+// app.get("/", (req, res) => {
+//   res.json({ message: "Welcome to bezkoder application." });
+// });
 
 require("./app/routes/turorial.routes")(app);
 
