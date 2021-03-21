@@ -5,7 +5,8 @@ const mongoose = require("mongoose");
 
 const db = {};
 db.mongoose = mongoose;
-db.url = dbConfig.url;
+// db.url = dbConfig.url;
+db.uri = dbConfig.uri;
 db.tutorials = require("./tutorial.model.js")(mongoose);
 
 module.exports = db;
