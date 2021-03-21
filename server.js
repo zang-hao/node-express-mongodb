@@ -9,7 +9,7 @@ const path = __dirname + '/app/views'
 app.use(express.static(path))
 
 var corsOptions = {
-  origin: ["http://127.0.0.1:8081", "http://192.168.2.102:8081","http://localhost:8081","http://localhost:8080","http://zangjames.herokuapp.com"]
+  origin: ["http://127.0.0.1:8081", "http://192.168.2.102:8081","http://localhost:8081","http://localhost:8080","https://zangjames.herokuapp.com"]
 };
 
 app.use(cors(corsOptions));
